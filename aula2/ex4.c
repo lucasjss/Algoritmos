@@ -13,6 +13,7 @@ int main()
     scanf("%d", &number2);
     printf("Digite a operacao (+, -, *, /): ");
     scanf(" %c", &op);
+    // Espaco antes de %c para consumir qualquer caractere de nova linha pendente no buffer
     
     switch (op)
     {
@@ -31,7 +32,8 @@ int main()
         case '/':
         if (number2 != 0)
         {
-            printf("Resultado: %.2f\n", (float)number1 / number2);
+            printf("Resultado: %.2f\n", (float)number1 / number2); 
+            // %.2f para formatar a saída com 2 casas decimais
         }
         else
         {
